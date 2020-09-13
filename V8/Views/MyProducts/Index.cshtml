@@ -1,0 +1,56 @@
+﻿@model IEnumerable<V8.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>My products for sale</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                Item Name
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Photo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+
+            <td>
+               $ @Html.DisplayFor(modelItem => item.Price)
+            </td>
+
+            <td>
+                <img height="200" width="200" src="@Html.DisplayFor(modelItem => item.Photo)"><img>
+            </td>
+
+            <td>
+                <a class="button button1" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                <a class="button button1" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a class="button button1" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "V8ContextConnection"
+    },
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "V8Context1"
+    },
+    "mssql3": {
+      "type": "mssql",
+      "connectionId": "V8Contexta"
+    },
+    "mssql4": {
+      "type": "mssql",
+      "connectionId": "V8ProductContext"
+    },
+    "mssql5": {
+      "type": "mssql",
+      "connectionId": "Context"
+    },
+    "mssql6": {
+      "type": "mssql",
+      "connectionId": "V8deletemmeContext"
+    }
+  }
+}
